@@ -17,3 +17,7 @@ public class ArticleForm {
                 '\'' + ", content='" + content +
                 '\'' + '}';
     }//toString end
+    public Article toEntity() {
+        return new Article(null, title, content);
+    }
+}// class end
