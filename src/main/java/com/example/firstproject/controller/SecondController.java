@@ -14,4 +14,8 @@ public class SecondController {
                 "당신이 할 수 있다고 믿든 할 수 없다고 믿든 믿는 대로 될 것이다." + " -헨리 포드-",
                 "작은 기회로부터 종종 위대한 업적이 시작된다." + "-데모스테네스-"
         }; // quotes end
-        int
+        int randint = (int)(Math.random() * quotes.length);
+        model.addAttribute("randomQuote", quotes[randint]);
+        return "quote";
+    }//func end
+}//class end
