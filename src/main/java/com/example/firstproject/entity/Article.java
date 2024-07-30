@@ -20,3 +20,8 @@ public class Article {
         this.content = content;
         this.Id = id;
     }
+    @Override
+    public String toString() {
+        return "Article{" + "Id=" + Id + ", title='" + title + '\'' + ", content='" + content + '\'' + '}';
+    }
+}
