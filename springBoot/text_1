@@ -2,3 +2,7 @@ Controller: broswer의 요청을 받아 서버에서 요청을 처리하는 역�
 -@Controller: 클래스가 컨트롤러 선언
 Model: 뷰 템플릿에서 사용되는 데이터를 관리
 @GetMapping: 요청 받아 특정 컨트롤러의 메서드로 처리하게 함
+@PostMapping: post방식으로 보낸 데이터를 받음
+DTO(Data Transfrom Obj): html form으로 보낸 데이터를 컨트롤러가 객체로 저장
+Entity: DB가 자바 객체를 받을수있게 함. 기반으로 테이블이 만들어짐
+Repository: Entity가 테이블에 관리할 수 있게 하는 인터페이스
