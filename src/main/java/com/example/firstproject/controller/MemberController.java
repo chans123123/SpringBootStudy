@@ -8,3 +8,26 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+
+@Slf4j
+@Controller
+public class MemberController {
+    @Autowired
+    private MemberRepository memberRepository;
+    @GetMapping("/signup")
+    public String signUp() {
+        return "members/new";
+    }
+    @PostMapping("/join")
+    public String newMember(MemberForm form) {
+        log.info(form.toString());
+        //System.out.println(form.toString());
+        Member member = form.toEntity();
+        log.info(member.toString());
+        //System.out.println(member.toString());
+        Member saved = memberRepository.save(member);
+        log.info(saved.toString());
+        //System.out.println(saved.toString());
+        return "";
+    }
+}
