@@ -14,3 +14,14 @@ public class MemberForm {
 //        this.email = email;
 //        this.password = password;
 //    }//Structure end
+
+//    @Override
+//    public String toString() {
+//        return "MemberForm{" + "email='" + email +
+//                '\'' + ", password='" + password +
+//                '\'' + '}';
+//    }
+    public Member toEntity() {
+        return new Member(null, email, password);
+    }
+}
