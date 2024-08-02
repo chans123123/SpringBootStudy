@@ -9,7 +9,7 @@ import jakarta.persistence.Id;
 public class Article {
     @Id
     @GeneratedValue
-    private Long Id;
+    private Long id;
     @Column
     private String title;
     @Column
