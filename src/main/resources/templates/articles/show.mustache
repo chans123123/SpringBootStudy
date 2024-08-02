@@ -7,4 +7,12 @@
         <th scope="col">Content</th>
     </tr>
     {{#article}}
-    
+    <tbody>
+        <tr>
+            <th>{{id}}</th>
+            <td>{{title}}</td>
+            <td>{{content}}</td>
+        </tr>
+    {{/article}}
+</table>
+{{>layouts/footer}}
