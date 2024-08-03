@@ -13,3 +13,4 @@ lambok: 코드를 간소화 해주는 라이브러리 최신버전 java 17 지�
   -@ToString : toString method 자동생성
   @Slf4j : 로깅기능 사용 log.info()
 @Autowired
+-  스프링부트가 미리 객체를 생성해놓음
