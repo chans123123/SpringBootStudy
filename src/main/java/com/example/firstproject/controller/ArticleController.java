@@ -36,5 +36,10 @@ public class ArticleController {
     public String show(@PathVariable Long id, Model model) {
         log.info("Id = " + id);
 
-        
+        //1. id를 조회해서 데이터를 가져오기
+        Article articleEntity = articleRepository.findById(id).orElse(null);//id 값이 없으면 null 넣음
+        //2. model에 데이터 저장
+        model.addAttribute("article", articleEntity);
+        return "articles/show";
+    }//show end
 }
