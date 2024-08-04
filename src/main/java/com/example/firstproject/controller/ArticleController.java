@@ -42,4 +42,7 @@ public class ArticleController {
         model.addAttribute("article", articleEntity);
         return "articles/show";
     }//show end
+    @GetMapping("/articles/{id}")
+    public String show(@PathVariable Long id, Model model) {
+        log.info("Id = " + id);
 }
