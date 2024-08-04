@@ -30,7 +30,7 @@ public class ArticleController {
         Article saved = articleRepository.save(article);
         log.info(saved.toString());
         //System.out.println(saved.toString());
-        return "redirect:/articles/" + saved.getId();
+        return "redirect:/articles/" + saved.getId();//redirect
     }//createArticle end
     @GetMapping("/articles/{id}")
     public String show(@PathVariable Long id, Model model) {
