@@ -1,4 +1,5 @@
 SQL
 
 SELECT 속성명 FROM 테이블명;
-INSERT INTO 테이블명(title1, title2, title3 ...) VALUES(value1, value2, value3...);
+INSERT INTO 테이블명(attribute1, attribute2, attribute3 ...) VALUES(value1, value2, value3...);
+UPDATE 테이블명 SET attribute = 'value'
