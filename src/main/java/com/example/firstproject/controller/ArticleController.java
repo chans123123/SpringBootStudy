@@ -32,4 +32,9 @@ public class ArticleController {
         //System.out.println(saved.toString());
         return "redirect:/articles/" + saved.getId();
     }//createArticle end
+    @GetMapping("/articles/{id}")
+    public String show(@PathVariable Long id, Model model) {
+        log.info("Id = " + id);
+
+        
 }
