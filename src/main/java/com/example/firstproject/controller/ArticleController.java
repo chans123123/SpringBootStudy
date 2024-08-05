@@ -70,6 +70,12 @@ public class ArticleController {
     public String update(ArticleForm form) {
         log.info(form.toString());
         Article articleEntity = form.toEntity();
-
+        log.info(articleEntity.toString());
+        Article target = articleRepository.findById(articleEntity.getId()).orElse(null);
+        if (target != null) {
+            articleRepository.save(articleEntity);
+        }
+        return "redirect:/articles/" + articleEntity.getId();
+    }
 }
     
