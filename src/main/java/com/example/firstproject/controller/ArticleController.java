@@ -77,5 +77,11 @@ public class ArticleController {
         }
         return "redirect:/articles/" + articleEntity.getId();
     }
+    @GetMapping("/articles/{id}/delete")
+    public String delete(@PathVariable Long id, RedirectAttributes rttr) {
+        log.info("삭제 요청이 들어왔습니다");
+        Article target = articleRepository.findById(id).orElse(null);
+        log.info(target.toString());
+        if
 }
     
