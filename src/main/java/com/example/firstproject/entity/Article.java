@@ -1,27 +1,26 @@
 package com.example.firstproject.entity;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.ToString;
 
+@AllArgsConstructor
+@NoArgsConstructor
+@ToString
+@Getter
 @Entity
 public class Article {
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     @Column
     private String title;
     @Column
     private String content;
 
-    public Article(Long id, String title, String content) {
-        this.title = title;
-        this.content = content;
-        this.Id = id;
-    }
-    @Override
-    public String toString() {
-        return "Article{" + "Id=" + Id + ", title='" + title + '\'' + ", content='" + content + '\'' + '}';
-    }
+    /*public Long getId() {
+     return id;
+     }*/
 }
