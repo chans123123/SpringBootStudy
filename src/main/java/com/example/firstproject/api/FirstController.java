@@ -10,3 +10,9 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
+@RestController
+public class FirstApiController {
+    private static final Logger log = LoggerFactory.getLogger(FirstApiController.class);
+    @Autowired
