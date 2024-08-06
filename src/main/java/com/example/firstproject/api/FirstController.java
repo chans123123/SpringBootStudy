@@ -21,3 +21,7 @@ public class FirstApiController {
     public List<Article> index() {
         return articleRepository.findAll();
     }//index end
+    @GetMapping("/api/articles/{id}")
+    public Article show(@PathVariable Long id) {
+        return articleRepository.findById(id).orElse(null);
+    }// show end
