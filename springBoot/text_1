@@ -14,3 +14,4 @@ lambok: 코드를 간소화 해주는 라이브러리 최신버전 java 17 지�
   @Slf4j : 로깅기능 사용 log.info()
 @Autowired
 -  스프링부트가 미리 객체를 생성해놓음
+REST : 서버의 리소스를 HTTP 메소드로 CRUD를 수행
