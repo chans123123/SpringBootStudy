@@ -16,3 +16,8 @@ import java.util.List;
 public class FirstApiController {
     private static final Logger log = LoggerFactory.getLogger(FirstApiController.class);
     @Autowired
+    private ArticleRepository articleRepository;
+    @GetMapping("/api/articles")
+    public List<Article> index() {
+        return articleRepository.findAll();
+    }//index end
