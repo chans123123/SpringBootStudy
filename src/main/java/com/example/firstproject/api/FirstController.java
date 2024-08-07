@@ -21,7 +21,7 @@ public class FirstApiController {
     }//index end
     @GetMapping("/api/articles/{id}")
     public Article show(@PathVariable Long id) {
-        return articleRepository.findById(id).orElse(null);
+        return articleService.show(id);
     }// show end
    @PostMapping("/api/articles")
    public Article create(@RequestBody ArticleForm articleForm) {
