@@ -27,8 +27,8 @@ public class FirstApiController {
 //    public Article show(@PathVariable Long id) {
 //        return articleRepository.findById(id).orElse(null);
 //    }// show end
-   @PostMapping("/api/articles")
-   public Article create(@RequestBody ArticleForm articleForm) {
-       Article article = articleForm.toEntity();
-       return articleRepository.save(article);
-   }//create end
+    @PostMapping("/api/articles")
+    public ResponseEntity<Article> create(@RequestBody ArticleForm dto) {
+        Article created = articleService.create(dto);
+        return (created != null) ? ResponseEntity.status(HttpStatus.OK).body(created) : ResponseEntity.status(HttpStatus.BAD_REQUEST).build();
+    }//create end
