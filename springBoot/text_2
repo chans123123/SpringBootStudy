@@ -3,4 +3,4 @@ SQL
 -INSERT INTO 테이블명(attribute1, attribute2, attribute3 ...) VALUES(value1, value2, value3...);
 -UPDATE 테이블명 SET attribute = 'value'
 -DELETE FROM 테이블명 WHERE condition
-
+ Http
