@@ -19,4 +19,5 @@ REST : 서버의 리소스를 HTTP 메소드로 CRUD를 수행
 API : 클라이언트가 서버의 리소스를 요청할 수 있게 하는 서버의 인터페이스
 RestController : jason 파일 반환
 Controller : 뷰 페이지 반환
+@PathVariable : 뷰 페이지 매개변수 가져옴
 @RequestBody : jason 데이터를 받을때 쓰는 어노테이션
