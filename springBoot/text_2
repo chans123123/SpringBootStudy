@@ -4,3 +4,5 @@ SQL
 -UPDATE 테이블명 SET attribute = 'value'
 -DELETE FROM 테이블명 WHERE condition
  Http
+-Get
+-Post
