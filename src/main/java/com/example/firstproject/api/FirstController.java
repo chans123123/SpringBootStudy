@@ -37,3 +37,7 @@ public class FirstApiController {
 //        Article article = articleForm.toEntity();
 //        return articleRepository.save(article);
 //    }//create end
+    @PostMapping("/api/articles{id}")
+    public ResponseEntity<Article> update(@PathVariable Long id, @RequestBody ArticleForm articleForm) {
+        Article updated = articleService.update(id, articleForm);
+        return (updated != null) ?
